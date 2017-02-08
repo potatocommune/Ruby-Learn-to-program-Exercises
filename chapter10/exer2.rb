@@ -1,11 +1,7 @@
 def log block_description, &block
   $layer = $layer + 1
-
-  print "  " * $layer
-  puts "Beginning \"#{block_description}\"..."
-
-  print "  " * $layer
-  puts "...\"#{block_description}\" finished, returning:  #{block.call}"
+  puts "  " * $layer + "Beginning \"#{block_description}\"..."
+  puts "  " * $layer + "...\"#{block_description}\" finished, returning:  #{block.call}"
 
   $layer = $layer - 1
 end
